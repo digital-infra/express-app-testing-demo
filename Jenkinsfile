@@ -15,7 +15,7 @@ node{
         }
     }
     stage('Docker build & Push'){
-        docker.withServer('172.20.10.2:2376'){
+        docker.withRegistry('http://46.101.246.61:8070', 'harborcreds){
             def app = docker.build("express-app-testing-demo:${commit_id}",".").push()
         }
     }
