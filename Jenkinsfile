@@ -11,7 +11,6 @@ node{
         myContainer.pull()
         myContainer.inside{
             sh 'npm install'
-            sh 'npm test'
         }
     }
     stage('Docker build & Push'){
