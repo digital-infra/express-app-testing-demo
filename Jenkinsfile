@@ -11,6 +11,7 @@ node{
         myContainer.pull()
         myContainer.inside{
             sh 'npm install'
+            sh 'npm config get registry'
         }
     }
     stage('Docker build & Push'){
