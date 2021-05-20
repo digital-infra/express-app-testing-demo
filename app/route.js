@@ -2,7 +2,7 @@ const formValidator = require('./form_validator');
 const photoModel = require('./photo_model');
 
 function route(app) {
-  app.get('/dev/samplenode', (req, res) => {
+  app.get('/', (req, res) => {
     const tags = req.query.tags;
     const tagmode = req.query.tagmode;
 
